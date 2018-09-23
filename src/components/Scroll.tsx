@@ -135,10 +135,6 @@ export class Scroll extends React.Component<IProps, IState> {
     }
   }
 
-  // public setScrollTopTarget = (scrollTopTargetNext: number): void => {
-
-  // }
-
   public onWheel = (event: React.WheelEvent<HTMLDivElement>): void => {
     const { deltaY } = event;
     const delta = getDirection(deltaY) * this.props.scrollStep + this.state.scrollTopTarget;
