@@ -1,20 +1,20 @@
 import * as React from 'react';
-import './App.css';
+import styled from 'styled-components';
+import { ContentGenerator } from './components/ContentGenerator';
+import { Scroll } from './components/Scroll';
 
-import logo from './logo.svg';
-
+const Wrapper = styled.div`
+  width: 250px;
+  margin: 24px auto;
+`;
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+        <Scroll>
+          <ContentGenerator />
+        </Scroll>
+      </Wrapper>
     );
   }
 }

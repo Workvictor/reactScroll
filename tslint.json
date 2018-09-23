@@ -1,5 +1,10 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier", "tslint-config-airbnb"],
+  "rules": {
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+    "import-name": [true, { "styledComponents": "styled" }],
+    "max-line-length": [true, { "code": 120 }]
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
